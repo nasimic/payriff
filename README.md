@@ -70,7 +70,7 @@ $redirectUrl = $paymentGateway->createOrder(
 return redirect($redirectUrl);
 ```
 
-*If the parameters aprroveUrl, cancelUrl, declineUrl are left blank, then we will automatically redirect to Success, Cancel, Decline
+*If the parameters aprroveUrl, cancelUrl, declineUrl are left blank, then user automatically will be redirected to proper Payriff pages (<a href="https://payriff.com/success.html">Success</a>, <a href="https://payriff.com/cancel.html">Cancel</a>, <a href="https://payriff.com/decline.html">Decline</a>)
 
 
 
