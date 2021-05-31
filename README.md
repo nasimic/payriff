@@ -37,6 +37,7 @@ use App\Services\PayriffService;
 
 
 $paymentGateway = new PayriffService;
+
 $redirectUrl = $paymentGateway->createOrder(
   '100',             // amount
   'Asif Quliyev',    // description
@@ -55,6 +56,7 @@ use App\Services\PayriffService;
 
 
 $paymentGateway = new PayriffService;
+
 $redirectUrl = $paymentGateway->createOrder(
   '100',                      // amount
   'Asif Quliyev',             // description
