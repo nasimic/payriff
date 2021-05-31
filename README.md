@@ -72,7 +72,37 @@ return redirect($paymentPageUrl);
 
 *If the parameters aprroveUrl, cancelUrl, declineUrl are left blank, then user automatically will be redirected to proper Payriff pages (<a href="https://payriff.com/success.html">Success</a>, <a href="https://payriff.com/cancel.html">Cancel</a>, <a href="https://payriff.com/decline.html">Decline</a>)
 
+If the transaction was successful, Payriff will return a POST request for approveURL, all transaction parameters:
 
+```json
+{
+    "payload": {
+        "version": "1.0",
+        "orderID": 21100444,
+        "sessionId": "6E41EC19A195AC7XEEFADD87A0CC6AC9",
+        "transactionType": "",
+        "RRN": "2532957",
+        "PAN": "416974XXXXXX2588",
+        "purchaseAmount": 19300,
+        "currency": "944",
+        "tranDateTime": "31/05/2021 16:38:13",
+        "responseCode": "001",
+        "responseDescription": "Approved, no balances available",
+        "brand": "VISA",
+        "orderStatus": "APPROVED",
+        "approvalCode": "727229 A",
+        "acqFee": "0",
+        "orderDescription": "Emin Mammadov",
+        "approvalCodeScr": "727229",
+        "purchaseAmountScr": 195.00,
+        "currencyScr": "AZN",
+        "orderStatusScr": "TƏSDİQLƏNİB",
+        "CardHolderName": ""
+    },
+    "code": "00000",
+    "message": "Operation performed successfully",
+}
+```
 
 ## Documentation
 
