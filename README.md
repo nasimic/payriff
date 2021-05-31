@@ -38,14 +38,14 @@ use App\Services\PayriffService;
 
 $paymentGateway = new PayriffService;
 
-$redirectUrl = $paymentGateway->createOrder(
+$paymentPageUrl = $paymentGateway->createOrder(
   '100',             // amount
   'Asif Quliyev',    // description
   'AZN',             // currency
   'AZ',              // language
 );
 
-return redirect($redirectUrl);
+return redirect($paymentPageUrl);
 ```
 
 Advanced Usage - Create order, pay after redirection and return user back to your website ( while process approved, declined or canceled ).
@@ -57,7 +57,7 @@ use App\Services\PayriffService;
 
 $paymentGateway = new PayriffService;
 
-$redirectUrl = $paymentGateway->createOrder(
+$paymentPageUrl = $paymentGateway->createOrder(
   '100',                      // amount
   'Asif Quliyev',             // description
   'AZN',                      // currency
@@ -67,7 +67,7 @@ $redirectUrl = $paymentGateway->createOrder(
   route('paymentDeclined'),   // declineUrl
 );
 
-return redirect($redirectUrl);
+return redirect($paymentPageUrl);
 ```
 
 *If the parameters aprroveUrl, cancelUrl, declineUrl are left blank, then user automatically will be redirected to proper Payriff pages (<a href="https://payriff.com/success.html">Success</a>, <a href="https://payriff.com/cancel.html">Cancel</a>, <a href="https://payriff.com/decline.html">Decline</a>)
