@@ -72,7 +72,7 @@ return redirect($paymentPageUrl);
 
 *If the parameters aprroveUrl, cancelUrl, declineUrl are left blank, then user automatically will be redirected to proper Payriff pages (<a href="https://payriff.com/success.html">Success</a>, <a href="https://payriff.com/cancel.html">Cancel</a>, <a href="https://payriff.com/decline.html">Decline</a>)
 
-If the transaction was successful, Payriff will return a POST request for approveURL, all transaction parameters:
+If the transaction was successful, Payriff will return a POST request for approveURL with these transaction parameters:
 
 ```json
 {
