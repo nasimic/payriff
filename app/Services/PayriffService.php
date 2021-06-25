@@ -124,9 +124,9 @@ class PayriffService
         ];
         
         $response = $this->sendRequest('getOrderInformation', $body);
-        return $response;
+        
         if($response->code == $this::SUCCESS){
-            return $response->payload->row;
+            return $response->payload;
         }
         
         return false;
