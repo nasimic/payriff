@@ -16,7 +16,7 @@ Normally config file will be published automatically. In case of manual publish:
 php artisan vendor:publish --tag=payriff-config
 ```
 
-Open config file and fill your credentials
+Add your credentials to .env file
 ```bash
 PAYRIFF_SECRET_KEY=your secret here
 ```
